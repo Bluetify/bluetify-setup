@@ -8,13 +8,12 @@ Compression=lzma
 SolidCompression=yes
 
 [Files]
-Source: "win-x64\Bluetify.exe"; DestDir: "{app}"; Flags: ignoreversion
-
-Source: "win-x64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "bluetify-win64\bin\Release\net9.0-windows\win-x64\BluetifyApp.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "bluetify-win64\bin\Release\net9.0-windows\win-x64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{group}\Bluetify"; Filename: "{app}\Bluetify.exe"
+Name: "{group}\Bluetify"; Filename: "{app}\BluetifyApp.exe"
 Name: "{group}\Uninstall Bluetify"; Filename: "{uninstallexe}"
 
 [Run]
-Filename: "{app}\Bluetify.exe"; Description: "Launch Bluetify"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\BluetifyApp.exe"; Description: "Launch Bluetify"; Flags: nowait postinstall skipifsilent
